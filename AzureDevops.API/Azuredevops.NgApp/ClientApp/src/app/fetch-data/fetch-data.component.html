@@ -1,0 +1,22 @@
+<h1 id="tableLabel">Azure Devops Builds</h1>
+<p *ngIf="!builds"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="builds">
+   <thead>
+     <tr>
+       <th>ID</th>
+       <th>BUILDS</th>
+       <th>STATUS</th>
+       <th>uri</th>
+     </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let build of builds">
+      <td>{{ build.id }}</td>
+      <td>{{ build.buildNumber }}</td>
+      <td>{{ build.status }}</td>
+      <td>{{ build.uri }}</td>
+    </tr>
+  </tbody>
+</table>
+
